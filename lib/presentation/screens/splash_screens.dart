@@ -1,7 +1,10 @@
+import 'package:ecommerceflutter/presentation/screens/email_verifications_screens.dart';
 import 'package:ecommerceflutter/presentation/screens/home_screens.dart';
-import 'package:ecommerceflutter/presentation/utility/assets_path.dart';
+
+
+import 'package:ecommerceflutter/presentation/widgets/applogo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:get/get.dart';
 
 class splash extends StatefulWidget {
@@ -17,7 +20,7 @@ class splash extends StatefulWidget {
 class _splashState extends State<splash> {
   void _moveToHomeScreen()async{
     await Future.delayed(const Duration (seconds:2));
-    Get.to(() => const Home());
+    Get.off(() => const Home());
   }
   @override
   void initState() {
@@ -32,7 +35,7 @@ class _splashState extends State<splash> {
         child: Column(
           children: [
             Spacer(),
-           SvgPicture.asset(AssetsPath.logoSvg,width: 100,),
+           Applogo(),
             Spacer(),
             CircularProgressIndicator(),
             SizedBox(height: 16,),
@@ -45,3 +48,5 @@ class _splashState extends State<splash> {
     );
   }
 }
+
+
