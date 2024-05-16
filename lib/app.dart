@@ -1,3 +1,4 @@
+import 'package:ecommerceflutter/binders_controllers.dart';
 import 'package:ecommerceflutter/presentation/screens/splash_screens.dart';
 import 'package:ecommerceflutter/presentation/utility/App_colors.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class _CraftifyState extends State<Craftify> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: BindersController(),
       home: splash(),
       theme: ThemeData(
         colorSchemeSeed: AppColors.primarycolor,
@@ -49,6 +51,11 @@ class _CraftifyState extends State<Craftify> {
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style:TextButton.styleFrom(
+            foregroundColor: AppColors.primarycolor
+          )
         )
       ),
     );

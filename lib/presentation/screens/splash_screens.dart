@@ -1,5 +1,6 @@
 import 'package:ecommerceflutter/presentation/screens/email_verifications_screens.dart';
 import 'package:ecommerceflutter/presentation/screens/home_screens.dart';
+import 'package:ecommerceflutter/presentation/screens/main_bottom_navigation_screens.dart';
 
 
 import 'package:ecommerceflutter/presentation/widgets/applogo.dart';
@@ -20,7 +21,7 @@ class splash extends StatefulWidget {
 class _splashState extends State<splash> {
   void _moveToHomeScreen()async{
     await Future.delayed(const Duration (seconds:2));
-    Get.off(() => const Home());
+    Get.off(() => const BottomNav());
   }
   @override
   void initState() {
