@@ -2,7 +2,6 @@ import 'package:ecommerceflutter/presentation/utility/App_colors.dart';
 import 'package:ecommerceflutter/presentation/utility/assets_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class PopularProducts extends StatelessWidget {
   const PopularProducts({
@@ -24,9 +23,10 @@ class PopularProducts extends StatelessWidget {
             children: [
               Container(
                 // decoration: BorderRadius.all(4),
-                width: 120,
-                color: Colors.amber,
-                child: SvgPicture.asset(AssetsPath.logonavsvg),
+                width: 100,
+                height: 30,
+                color: Colors.transparent,
+                child: Image.asset(AssetsPath.shoejpg,width: 50,),
               ),
               SizedBox(height: 3,),
               Column(

@@ -1,6 +1,10 @@
 import 'package:ecommerceflutter/presentation/stateControllers/MainNavControllers.dart';
+import 'package:ecommerceflutter/presentation/widgets/cartDetailsWidget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -9,7 +13,10 @@ class Cart extends StatefulWidget {
   State<Cart> createState() => _CartState();
 }
 
+
 class _CartState extends State<Cart> {
+
+
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -32,6 +39,11 @@ class _CartState extends State<Cart> {
             },
             icon: Icon(Icons.arrow_back),
           ),
+        ),
+        body: Column(
+          children: [
+            CartBody()
+          ],
         ),
       ),
     );
